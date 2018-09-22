@@ -1,0 +1,59 @@
+body {
+  font-family: "Arial";
+}
+
+.header {
+  text-align: center;
+  min-width: 600px;
+  padding-top: 16px;
+}
+
+.homepage {
+
+}
+
+.title {
+  font-size: 36px;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.navigation {
+  padding-top: 12px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+.navigation a.link {
+  /*text-decoration: none;*/
+  color: #4a4a4a;
+}
+
+.navigation a.visited {
+  /*text-decoration: none;*/
+}
+
+.navigation a.hover {
+  /*text-decoration: none;*/
+  color: #1a1a1a;
+}
+
+.navigation a.active {
+  /*text-decoration: none;*/
+}
+
+.container {
+
+}
+
+.slideshow {
+
+}
+
+.auto-slides {
+
+}
+
