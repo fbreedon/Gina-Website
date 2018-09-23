@@ -10,6 +10,7 @@ body {
   text-align: center;
   min-width: 600px;
   padding-top: 16px;
+  margin: auto;
 }
 
 .homepage {
@@ -20,7 +21,7 @@ body {
   font-size: 36px;
   letter-spacing: 4px;
   text-decoration: none;
-  color: #4a4a4a;
+  color: #2a2a2a;
 }
 
 .navigation {
@@ -29,26 +30,28 @@ body {
 }
 
 .navigation a {
+  font-size: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
   text-decoration: none;
-  color: #4a4a4a;
+  color: #2a2a2a;
 }
 
-.navigation a.link {
-  /*text-decoration: none;*/
-  color: #4a4a4a;
+.navigation a:link {
+  
 }
 
-.navigation a.visited {
-  /*text-decoration: none;*/
+.navigation a:visited {
+  
 }
 
-.navigation a.hover {
-  /*text-decoration: none;*/
-  color: #1a1a1a;
+.navigation a:hover {
+  color: #6a6a6a;
 }
 
-.navigation a.active {
-  /*text-decoration: none;*/
+.navigation a.active {   /* not the CSS active */
+  color: #267326;
+  text-shadow: 1px 1px #d9f2d9;
 }
 
 .container {
@@ -60,13 +63,13 @@ body {
 }
 
 .slideshow {
-  /*max-width: 1080px;*/
+  max-width: 600px;
   position: relative;
   margin: auto;
 }
 
 .auto-slides {
-  display: none;
+  display: block;
   width: 100%;
 }
 

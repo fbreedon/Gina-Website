@@ -19,6 +19,6 @@ function slideShow() {
 	}
 
 	slides[slideIndex-1].style.display = "block";
-	// Change the image every 5 seconds
+	// Change the image every 4 seconds
 	setTimeout(slideShow, 4000);
 }
