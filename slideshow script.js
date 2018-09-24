@@ -4,7 +4,7 @@ slideShow();
 function slideShow() {
 	// Define variables for the array index and get the slides from the html class label
 	var i;
-	var slides = document.getElementsByClassName("auto-slides");
+	var slides = document.getElementsByClassName("slide-img");
 
 	// 
 	for (i = 0; i < slides.length; i++) {

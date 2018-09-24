@@ -60,16 +60,49 @@ body {
 
 .content-wrapper {
   margin-top: 64px;
+  /*changing the height moves the nav bar for some reason*/
 }
 
 .slideshow {
-  max-width: 600px;
+  width: 600px;
   position: relative;
   margin: auto;
 }
 
-.auto-slides {
+.slide-img {
   display: block;
   width: 100%;
 }
 
+.gallery {
+  width: 600px;
+  position: relative;
+  margin: auto;
+  /*something about the gallery is moving the nav bar too */
+}
+
+.gallery-main {
+  
+}
+
+.gallery-images {
+
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+}
+
+.gallery-nav {
+
+}
+
+.footer {
+  bottom: 0;
+}
+
+.footer-left {
+  width: 80%;
+  margin: auto;
+}
