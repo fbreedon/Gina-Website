@@ -61,7 +61,7 @@ body {
 .content-wrapper {
   margin-top: 64px;
   /*changing the height moves the nav bar for some reason*/
-  height: 960px;
+  height: 1000px;
 }
 
 .slideshow {
@@ -77,16 +77,12 @@ body {
 
 .gallery {
   width: 1080px;
-  height: 960px;
+  height: 1000px;
   position: relative;
   margin: auto;
 }
 
 .gallery-main {
-  
-}
-
-.gallery-images {
   width: 600px;
   position: relative;
   margin: auto;
@@ -98,7 +94,21 @@ body {
 }
 
 .gallery-nav {
+  height: 140px;
+  width: 700px;
+  margin: auto;
+  margin-top: 32px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 
+.gallery-icon {
+  cursor: pointer;
+  height: 120px;
+  width: 100px;
+  margin: 0 4px;
+  display: inline-block;
 }
 
 .gallery-buttons {
@@ -109,7 +119,6 @@ body {
   font-size: 3em;
   cursor: pointer;
   position: absolute;
-  top: 35%;
   width: auto;
   color: #404040;
 }
@@ -119,11 +128,15 @@ body {
 }
 
 .prev-button:hover, .next-button:hover {
-	color: #267326;
+  color: #267326;
 }
 
-.gallery-main .gallery-buttons {
+.gallery-buttons .prev-button, .gallery-buttons .next-button{
+  top: 35%;
+}
 
+.highlight {
+  border-style: solid;
 }
 
 .footer {

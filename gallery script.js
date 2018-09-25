@@ -12,7 +12,7 @@ function currentImg(n) {
 function showImgs(n) {
 	var i;
 	var x = document.getElementsByClassName("gallery-img");
-	//var icons = document.getElementsByClassName("gallery-icon");
+	var icons = document.getElementsByClassName("gallery-icon");
 
 	// Loop back to the first image when clicking next on the last image
 	if (n > x.length) {
@@ -29,13 +29,13 @@ function showImgs(n) {
 		x[i].style.display = "none";
 	}
 
-	// Highlight the current image icon in the nav by replacing the html class
-	/*for (i = 0; i < icons.length; i++) {
-		icons[i].className = icons[i].className.replace();
-	}*/
+	// Remove the highlight from the icons
+	for (i = 0; i < icons.length; i++) {
+		icons[i].className = icons[i].className.replace(" highlight", "");
+	}
 
 	// Set the current image's display value to "block"
 	x[imgIndex-1].style.display = "block";
-	// Set the current nav icon's class name to highlight
-	//icons[imgIndex-1].className += "highlight";
+	// Add "highlight" to the current nav icon's class name
+	icons[imgIndex-1].className += " highlight";
 }
