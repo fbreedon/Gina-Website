@@ -6,7 +6,7 @@ function slideShow() {
 	var i;
 	var slides = document.getElementsByClassName("slide-img");
 
-	// 
+	// Set the css display value for each slide to "none"
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}

@@ -31,10 +31,6 @@
       <div class="gallery">
         <!-- Gallery container for images and side buttones -->
         <div class="gallery-main">
-          <!-- Gallery container for the main buttons -->
-          <div class="gallery-buttons">
-
-          </div>
       	  <!-- Gallery container for just the main images -->
       	  <div class="gallery-images">
             <!-- Gallery images -->
@@ -54,13 +50,25 @@
             <img class="gallery-img" src="./images/current work/Borders.jpg">
           </div>
         </div>
-        <!-- Gallery container for the bottom navigation -->
+        <!-- Gallery container for the main buttons that go to the next image -->
+        <div class="gallery-buttons">
+          <a class="prev-button" onclick="plusImg(-1)">❮</a>
+          <a class="next-button" onclick="plusImg(1)">❯</a>
+        </div>
+        <!-- Gallery container for the bottom navigation-->
+        <!-- Click an image to jump to it, use overflow to scroll through them -->
         <div class="gallery-nav">
-          
+          <!--div class="gallery-buttons">
+            <button class="prev-button" onclick="plusNavImg(-1)">❮</button>
+            <button class="next-button" onclick="plusNavImg(1)">❯</button>
+          </div-->
+          <!-- image buttons here -->
         </div>
       </div>
     </div>
 
+    <!-- Call the gallery script -->
+    <script src="gallery script.js"></script>
 
     <!-- Page footer for copyright and social media info -->
     <footer class="footer">
