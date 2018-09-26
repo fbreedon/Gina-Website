@@ -61,7 +61,7 @@ body {
 .content-wrapper {
   margin-top: 64px;
   /*changing the height moves the nav bar for some reason*/
-  height: 1000px;
+  height: 1080px;
 }
 
 .slideshow {
@@ -80,10 +80,15 @@ body {
   height: 1000px;
   position: relative;
   margin: auto;
+  padding-top: 16px;
+  border-top-style: solid;
+  border-color: #bfbfbf;
+  border-width: 2px;
 }
 
 .gallery-main {
   width: 600px;
+  height: 820px;
   position: relative;
   margin: auto;
 }
@@ -106,8 +111,11 @@ body {
 .gallery-icon {
   cursor: pointer;
   height: 120px;
-  width: 100px;
-  margin: 0 4px;
+  width: 120px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffffff;
   display: inline-block;
 }
 
@@ -136,7 +144,7 @@ body {
 }
 
 .highlight {
-  border-style: solid;
+  border-color: #000000;
 }
 
 .footer {

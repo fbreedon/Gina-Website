@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    
+
     <header class="header">
       <a class="title" href="./index.html">Gina Werfel</a>
       <div class="container">
@@ -25,7 +25,56 @@
       </div>
     </header>
 
+    <!-- Content wrapper pads the margins from the header and footer -->
+    <div class="content-wrapper">
+      <!-- Gallery container -->
+      <div class="gallery">
+        <!-- Gallery container for images -->
+        <div class="gallery-main">
+          <!-- Gallery images -->
+          <img class="gallery-img" src="./images/works on paper/Cadence.jpg">
+          <img class="gallery-img" src="./images/works on paper/Coastal Reverie 2013.jpg">
+          <img class="gallery-img" src="./images/works on paper/GW17 Stencil 30x22.jpg">
+          <img class="gallery-img" src="./images/works on paper/GW18 Opposition 30x22.jpg">
+          <img class="gallery-img" src="./images/works on paper/Island.jpg">
+          <img class="gallery-img" src="./images/works on paper/Notation.jpg">
+          <img class="gallery-img" src="./images/works on paper/Pink Haze.jpg">
+          <img class="gallery-img" src="./images/works on paper/Roma.jpg">
+          <img class="gallery-img" src="./images/works on paper/Skeletal Structure.jpg">
+          <img class="gallery-img" src="./images/works on paper/Spring Improvisation 2013.jpg">
+          <img class="gallery-img" src="./images/works on paper/Twisted.jpg">
+          <img class="gallery-img" src="./images/works on paper/Year of the Ram.jpg">
+        </div>
+        <!-- Gallery container for the main buttons that go to the next image -->
+        <div class="gallery-buttons">
+          <a class="prev-button" onclick="plusImg(-1)">❮</a>
+          <a class="next-button" onclick="plusImg(1)">❯</a>
+        </div>
+        <!-- Gallery container for the bottom navigation-->
+        <!-- Click an image to jump to it, use overflow to scroll through them -->
+        <div class="gallery-nav">
+          <!--div class="gallery-buttons">
+            
+          </div-->
+          <!-- Gallery navigation icon buttons -->
+          <img class="gallery-icon" onclick="currentImg(1)" src="./images/works on paper/icons/Cadence icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(2)" src="./images/works on paper/icons/Coastal Reverie 2013 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(3)" src="./images/works on paper/icons/GW17 Stencil 30x22 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(4)" src="./images/works on paper/icons/GW18 Opposition 30x22 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(5)" src="./images/works on paper/icons/Island icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(6)" src="./images/works on paper/icons/Notation icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(7)" src="./images/works on paper/icons/Pink Haze icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(8)" src="./images/works on paper/icons/Roma icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(9)" src="./images/works on paper/icons/Skeletal Structure icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(10)" src="./images/works on paper/icons/Spring Improvisation 2013 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(11)" src="./images/works on paper/icons/Twisted icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(12)" src="./images/works on paper/icons/Year of the Ram icon.jpg">
+        </div>
+      </div>
+    </div>
 
+    <!-- Call the gallery script -->
+    <script src="gallery script.js"></script>
 
 
     <!-- Page footer for copyright and social media info -->
