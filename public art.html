@@ -15,18 +15,62 @@
       <div class="container">
       	<nav class="navigation">
       	  <a href="./painting.html">Painting</a>
-      	  <a href="./paper.html">Paper</a>
+      	  <a href="./paper.html">Works On Paper</a>
       	  <a href="./public art.html" class="active">Public Art</a>
       	  <a href="./archive.html">Archive</a>
-      	  <a href="./reviews.html">Reviews</a>
-      	  <a href="./catalogue.html">Catalogue</a>
+      	  <a href="./reviews.html">Press and Reviews</a>
+      	  <!--a href="./catalogue.html">Catalogue</a-->
       	  <a href="./about.html">About</a>
       	</nav>
       </div>
     </header>
 
+    <!-- Content wrapper pads the margins from the header and footer -->
+    <div class="content-wrapper">
+      <!-- Gallery container -->
+      <div class="gallery">
+        <!-- Gallery container for images -->
+        <div class="gallery-main public-art">
+          <!-- Gallery images -->
+          <img class="gallery-img" src="./images/public art/JCP_0746-X3.jpg">
+          <img class="gallery-img tall" src="./images/public art/JCP_0768-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0782-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0787-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0806-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0807-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0829-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0841-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0845-X3.jpg">
+          <img class="gallery-img" src="./images/public art/JCP_0952-X3.jpg">
+        </div>
+        <!-- Gallery container for the main buttons that go to the next image -->
+        <div class="gallery-buttons">
+          <a class="prev-button" onclick="plusImg(-1)">❮</a>
+          <a class="next-button" onclick="plusImg(1)">❯</a>
+        </div>
+        <!-- Gallery container for the bottom navigation-->
+        <!-- Click an image to jump to it, use overflow to scroll through them -->
+        <div class="gallery-nav">
+          <!--div class="gallery-buttons">
+            
+          </div-->
+          <!-- Gallery navigation icon buttons -->
+          <img class="gallery-icon" onclick="currentImg(1)" src="./images/public art/icons/JCP_0746-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(2)" src="./images/public art/icons/JCP_0768-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(3)" src="./images/public art/icons/JCP_0782-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(4)" src="./images/public art/icons/JCP_0787-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(5)" src="./images/public art/icons/JCP_0806-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(6)" src="./images/public art/icons/JCP_0807-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(7)" src="./images/public art/icons/JCP_0829-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(8)" src="./images/public art/icons/JCP_0841-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(9)" src="./images/public art/icons/JCP_0845-X3 icon.jpg">
+          <img class="gallery-icon" onclick="currentImg(10)" src="./images/public art/icons/JCP_0952-X3 icon.jpg">
+        </div>
+      </div>
+    </div>
 
-
+    <!-- Call the gallery script -->
+    <script src="gallery script.js"></script>
 
     <!-- Page footer for copyright and social media info -->
     <footer class="footer">
