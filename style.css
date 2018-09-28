@@ -36,14 +36,6 @@ body {
   color: #2a2a2a;
 }
 
-.navigation a:link {
-  
-}
-
-.navigation a:visited {
-  
-}
-
 .navigation a:hover {
   color: #ccb3ff;
 }
@@ -160,6 +152,39 @@ body {
   width: 450px;
   height: 100%;
   margin: auto;
+}
+
+.archive-wrapper {
+
+}
+
+.archive-tab {
+
+}
+
+.archive-tab a {
+
+}
+
+.archive-tab a:hover {
+
+}
+
+.archive-tab a.active {		/*also not the CSS active */
+
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.tab-content {
+	
+}
+
+.archive-img {
+  text-align: center;
 }
 
 .footer {

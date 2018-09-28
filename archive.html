@@ -25,8 +25,36 @@
       </div>
     </header>
 
+    <!-- Archive wrapper pads the margins from the header and footer, differently from content wrapper -->
+    <div class="archive-wrapper">
+      <!-- Archive tabs to view either abstractions or landscapes -->
+      <div class="archive-tab">
+        <!-- The tab link class is gotten by the archive tab script -->
+        <a class="tab-link" onclick="openTab(event, 'Abstractions')" id="default-tab">Abstractions</a>
+        <a class="tab-link" onclick="openTab(event, 'Landscapes')">Landscapes</a>
+      </div>
+      <!-- Archive grid for the pictures contained in the Abstractions tab -->
+      <div id="Abstractions" class="archive-grid tab-content">
+        <div class="archive-img">1</div>
+        <div class="archive-img">2</div>
+        <div class="archive-img">3</div>
+        <div class="archive-img">4</div>
+        <div class="archive-img">5</div>
+        <div class="archive-img">6</div>
+      </div>
+      <!-- Archive grid for the pictures contained in the Landscapes tab -->
+      <div id="Landscapes" class="archive-grid tab-content">
+        <div class="archive-img">7</div>
+        <div class="archive-img">8</div>
+        <div class="archive-img">9</div>
+        <div class="archive-img">10</div>
+        <div class="archive-img">11</div>
+        <div class="archive-img">12</div>
+      </div>
+    </div>
 
-
+    <!-- Call the archive tab script -->
+    <script src="archive tab script.js"></script>
 
     <!-- Page footer for copyright and social media info -->
     <footer class="footer">
