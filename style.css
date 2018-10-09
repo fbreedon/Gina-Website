@@ -41,7 +41,7 @@ body {
 }
 
 .navigation a:hover {
-  color: #ccb3ff;
+  color: #80e0ff;
 }
 
 .navigation a.active {   /* not the CSS active */
@@ -101,6 +101,7 @@ body {
 .gallery-img {
   display: block;
   width: 100%;
+  max-height: 820px;
 }
 
 .gallery-nav {
@@ -134,6 +135,7 @@ body {
   position: absolute;
   width: auto;
   color: #999999;
+  user-select: none;
 }
 
 .prev-button {
@@ -145,7 +147,7 @@ body {
 }
 
 .prev-button:hover, .next-button:hover {
-  color: #267326;
+  color: #00a3cc;
 }
 
 .gallery-buttons .prev-button, .gallery-buttons .next-button{
