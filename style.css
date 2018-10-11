@@ -104,6 +104,26 @@ body {
   max-height: 820px;
 }
 
+.prev-img, .next-img {
+  width: 540px;
+  height: 820px;
+  cursor: ew-resize;
+  position: absolute;
+  z-index: 1;
+}
+
+.prev-img {
+  left: 0;
+}
+
+.next-img {
+  right: 0;
+}
+
+.public-art-button {
+  height: 700px;
+}
+
 .gallery-nav {
   height: 140px;
   width: 700px;
