@@ -81,7 +81,7 @@ p {
 .content-wrapper {
   margin-top: 72px;
   /*changing the height moves the nav bar for some reason*/
-  height: 1080px;
+  min-height: 1080px;
 }
 
 .slideshow {
