@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  color: #737373;
+  color: #4040bf;
   margin-bottom: 0px;
 }
 
@@ -212,7 +212,7 @@ p {
   margin-top: 32px;
 }
 
-.archive-tab {
+/*.archive-tab {
   margin: auto;
   width: 50%;
   text-align: center;
@@ -228,20 +228,20 @@ p {
   color: #ccb3ff;
 }
 
-.archive-tab a.active {		/*also not the CSS active */
+.archive-tab a.active {
   color: #884dff;
   text-shadow: 1px 1px #ddccff;
-}
+}*/
 
-.tab-content {		/* gotten by the archive script */
+/*.tab-content {		 gotten by the archive script 
 
-}
+}*/
 
 .archive-grid {
   display: inline-grid;
   grid-template-columns: auto auto auto;
   grid-gap: 32px;
-  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .archive-img {
@@ -277,6 +277,10 @@ p {
   max-width: 1080px;
   padding: 0px 32px 32px 32px;
   margin: auto;
+}
+
+#cv {
+  text-decoration: none;
 }
 
 .about-img {
