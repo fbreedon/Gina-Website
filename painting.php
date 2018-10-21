@@ -75,37 +75,22 @@
         <div class="gallery-info">
         <!-- Php to read the info files and display them under their images -->
           <?php
-          // Define the path to the info directory
-          $info_path = 'images/paintings/info/';
-          // Get all the text files
-          $num_info_files = glob($info_path . "*.txt");
-          // Open the info folder and store it in a variable
-          $info_folder = opendir($info_path);
-
-          // Make sure there were files to grab
-          if($num_info_files > 0) {
-            // Read each file until there are no more files
-            while(false !== ($info_file = readdir($info_folder))) {
-              // Define the path to the current file
-              $info_file_path = $info_path.$info_file;
-              // Convert the extension string of the file to lowercase
-              $info_extension = strtolower(pathinfo($info_file ,PATHINFO_EXTENSION));
-              // Make sure the file is a text file
-              if($info_extension=='txt') {
-                $temp_file = fopen($info_file_path,"r");
+          // Grab all the text files from the directory and store them in an array
+          foreach (glob("images/paintings/info/*.txt") as $info_file) {
+            // Open and read the current file in the array
+            $file_handle = fopen($info_file, "r");
           ?>
-                <div class="info"><?php echo fgets($temp_file); ?> />
-                <?php
-              }
-            }   // Done with the current file
-          }     // Done with all the files
-          // There were no matching files
-          else {
-            echo "No Info Files Found";
+            <!-- Gallery image information -->
+            <div class="info">
+              <?php
+              // Read the file line by line and put them all in one div
+              while (!feof($file_handle)) { echo fgets($file_handle); ?> <br> <?php }
+              ?>
+            </div>
+            <?php
+            // Close the opened file
+            fclose($file_handle);
           }
-          // Close the opened directory
-          closedir($info_folder);
-          fclose($info_file_path);
           ?>
         </div>
 

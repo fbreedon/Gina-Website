@@ -127,7 +127,7 @@ p {
 }
 
 .prev-img, .next-img {
-  width: 540px;
+  width: 440px;
   height: 820px;
   cursor: ew-resize;
   position: absolute;
