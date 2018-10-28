@@ -34,43 +34,109 @@
         <!--a class="tab-link" onclick="openTab(event, 'Landscapes')">Landscapes</a-->
       <!--/div-->
       <h2>Abstraction</h2>
-      <!-- Archive grid for the pictures contained in the Abstractions tab -->
+      <!-- Abstractions archive image grid -->
       <div id="Abstractions" class="archive-grid tab-content">
-        <img class="archive-img" src="./images/abstractions/Duet, 36x36, 2008.jpg">
-        <img class="archive-img" src="./images/abstractions/Autumn Light 2013.jpg">
-        <img class="archive-img" src="./images/abstractions/Bleed.jpg">
-        <img class="archive-img" src="./images/abstractions/Fast Forward.jpg">
-        <img class="archive-img" src="./images/abstractions/Foliage.jpg">
-        <img class="archive-img" src="./images/abstractions/GW.jpg">
-        <img class="archive-img" src="./images/abstractions/Hieroglyph.jpg">
-        <img class="archive-img" src="./images/abstractions/Red Dress 48x48.jpg">
-        <img class="archive-img" src="./images/abstractions/Restraint 60x48.jpg">
-        <img class="archive-img" src="./images/abstractions/Underground.jpg">
-        <img class="archive-img" src="./images/abstractions/Winter Conversation.jpg">
-        <img class="archive-img" src="./images/abstractions/Winter Light 2014.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(1)" 
+         src="./images/abstractions/Duet.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(2)" 
+         src="./images/abstractions/Autumn Light 2013.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(3)" 
+         src="./images/abstractions/Bleed.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(4)" 
+         src="./images/abstractions/Fast Forward.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(5)" 
+         src="./images/abstractions/Foliage.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(6)" 
+         src="./images/abstractions/GW.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(7)" 
+         src="./images/abstractions/Hieroglyph.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(8)" 
+         src="./images/abstractions/Red Dress 48x48.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(9)" 
+         src="./images/abstractions/Restraint 60x48.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(10)" 
+         src="./images/abstractions/Underground.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(11)" 
+         src="./images/abstractions/Winter Conversation.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(12)" 
+         src="./images/abstractions/Winter Light 2014.jpg">
       </div>
       <h2>Landscape</h2>
-      <!-- Archive grid for the pictures contained in the Landscapes tab -->
+      <!-- Landscape archive image grid -->
       <div id="Landscapes" class="archive-grid tab-content">
-        <img class="archive-img" src="./images/landscapes/Santa Cruz old.jpg">
-        <img class="archive-img" src="./images/landscapes/Incoming Tide.jpg">
-        <img class="archive-img" src="./images/landscapes/Olmsted Point.jpg">
-        <img class="archive-img" src="./images/landscapes/Umbrian Hills 60x72.jpg">
-        <img class="archive-img" src="./images/landscapes/Outbuildings.jpg">
-        <img class="archive-img" src="./images/landscapes/Umbrella Pine.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(13)"
+         src="./images/landscapes/Santa Cruz old.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(14)"
+         src="./images/landscapes/Incoming Tide.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(15)"
+         src="./images/landscapes/Olmsted Point.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(16)"
+         src="./images/landscapes/Umbrian Hills 60x72.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(17)"
+         src="./images/landscapes/Outbuildings.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(18)"
+         src="./images/landscapes/Umbrella Pine.jpg">
       </div>
     </div>
 
-    <!--div class="archive-modal">
-      <span class="modal-close">&times;</span>
-      <img class="modal-img">
-      <div id="modal-caption"></div>
-    </div-->
+    <div id="modal" class="archive-modal">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <!-- Modal navigation by clicking to the right or left of images -->
+      <a class="prev-img" onclick="plusModal(-1)"></a>
+      <a class="next-img" onclick="plusModal(1)"></a>
+      <div class="modal-content">
+        <!-- Abstraction modal images -->
+        <img class="modal-img" src="./images/abstractions/Duet.jpg">
+        <img class="modal-img" src="./images/abstractions/Autumn Light 2013.jpg">
+        <img class="modal-img" src="./images/abstractions/Bleed.jpg">
+        <img class="modal-img" src="./images/abstractions/Fast Forward.jpg">
+        <img class="modal-img" src="./images/abstractions/Foliage.jpg">
+        <img class="modal-img" src="./images/abstractions/GW.jpg">
+        <img class="modal-img" src="./images/abstractions/Hieroglyph.jpg">
+        <img class="modal-img" src="./images/abstractions/Red Dress 48x48.jpg">
+        <img class="modal-img" src="./images/abstractions/Restraint 60x48.jpg">
+        <img class="modal-img" src="./images/abstractions/Underground.jpg">
+        <img class="modal-img" src="./images/abstractions/Winter Conversation.jpg">
+        <img class="modal-img" src="./images/abstractions/Winter Light 2014.jpg">
+
+        <!-- Landscape modal images -->
+        <img class="modal-img" src="./images/landscapes/Santa Cruz old.jpg">
+        <img class="modal-img" src="./images/landscapes/Incoming Tide.jpg">
+        <img class="modal-img" src="./images/landscapes/Olmsted Point.jpg">
+        <img class="modal-img" src="./images/landscapes/Umbrian Hills 60x72.jpg">
+        <img class="modal-img" src="./images/landscapes/Outbuildings.jpg">
+        <img class="modal-img" src="./images/landscapes/Umbrella Pine.jpg">
+        
+        <!-- Gallery container for the image information -->
+        <div class="gallery-info">
+          <!-- Image information captions -->
+          <div class="info">info 1</div>
+          <div class="info">info 2</div>
+          <div class="info">info 3</div>
+          <div class="info">info 4</div>
+          <div class="info">info 5</div>
+          <div class="info">info 6</div>
+          <div class="info">info 7</div>
+          <div class="info">info 8</div>
+          <div class="info">info 9</div>
+          <div class="info">info 10</div>
+          <div class="info">info 11</div>
+          <div class="info">info 12</div>
+          <div class="info">info 13</div>
+          <div class="info">info 14</div>
+          <div class="info">info 15</div>
+          <div class="info">info 16</div>
+          <div class="info">info 17</div>
+          <div class="info">info 18</div>
+        </div>
+      </div>
+    </div>
 
     <!-- **REMOVED Call the archive tab script REMOVED** -->
     <!--script src="archive tab script.js"></script-->
 
-    <!--script src="archive modal script.js"></script-->
+    <!-- Call the archive modal script -->
+    <script src="archive modal script.js"></script>
 
     <!-- Page footer for copyright and social media info -->
     <footer class="footer">
