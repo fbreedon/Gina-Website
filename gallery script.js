@@ -1,14 +1,21 @@
 var imgIndex = 1;
 showImgs(imgIndex);
 
+// Take in an integer and increase the image index that many times
+// Used to scroll through the images
 function plusImg(n) {
 	showImgs(imgIndex += n);
 }
 
+// Take in an integer and set the image index equal to it
+// Used to jump to an image
 function currentImg(n) {
 	showImgs(imgIndex = n);
 }
 
+// Take in an integer, create variables for the images, icons, and info, set
+// the image index, clear all the images and infos, remove the highlight, then
+// set the correct image and info to show
 function showImgs(n) {
 	var i;
 	var x = document.getElementsByClassName("gallery-img");
@@ -25,12 +32,12 @@ function showImgs(n) {
 		imgIndex = x.length;
 	}
 
-	// Set the css display value for each image to "none"
+	// Set the display value for each image to "none"
 	for (i = 0; i < x.length; i++) {
 		x[i].style.display = "none";
 	}
 
-	// Set the css display value for each info to "none"
+	// Set the display value for each info to "none"
 	// This is a seperate function in case there's a different number of infos and images
 	for (i = 0; i < info.length; i++) {
 		info[i].style.display = "none";

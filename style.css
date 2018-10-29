@@ -1,3 +1,25 @@
+/* CSS DIRECTORY
+	1. =GLOBAL
+	2. =HEADER
+	3. =GALLERY
+	4. =GALLERY NAVIGATION
+	5. =ARCHIVE
+	6. =PRESS
+	7. =ABOUT
+	8. =FOOTER
+*/
+
+/* COLORS
+  - default body text  #737373
+  - header text        #4040bf
+  - navigation text    #8c8c8c
+  - active navigation  #00a3cc
+  - hover text         #80e0ff
+  - navigation buttons #999999
+*/
+
+/* === GLOBAL === */
+
 * {
   box-sizing: border-box;
 }
@@ -23,6 +45,8 @@ h3 {
 p {
   color: #737373;
 }
+
+/* === HEADER === */
 
 .header {
   text-align: center;
@@ -75,13 +99,10 @@ p {
   position: relative;
 }*/
 
-.container {
-
-}
+/* === GALLERY === */
 
 .content-wrapper {
   margin-top: 72px;
-  /*changing the height moves the nav bar for some reason*/
   min-height: 1080px;
 }
 
@@ -109,9 +130,6 @@ p {
   height: 1000px;
   position: relative;
   margin: auto;
-  /*border-top-style: solid;
-  border-color: #bfbfbf;
-  border-width: 2px;*/
 }
 
 .gallery-main {
@@ -127,6 +145,8 @@ p {
   height: 100%;
   margin: auto;
 }
+
+/* === GALLERY NAVIGATION === */
 
 .prev-img, .next-img {
   width: 440px;
@@ -148,10 +168,6 @@ p {
   width: 50%;
   height: 1080px;
 }
-
-/*.public-art-button {
-  height: 700px;
-}*/
 
 .gallery-info {
   position: relative;
@@ -219,14 +235,7 @@ p {
   border-color: #cccccc;
 }
 
-/*.public-art {
-  width: 900px;
-  height: 700px;
-}
-
-.public-art .tall {
-  max-height: 700px;
-}*/
+/* === ARCHIVE === */
 
 .archive-wrapper {
   max-width: 964px;
@@ -319,11 +328,14 @@ p {
   cursor: pointer;
 }
 
+/* unused */
 .publications-wrapper {
   max-width: 1080px;
   min-height: 1080px;
   margin: auto;
 }
+
+/* === PRESS === */
 
 .catalogue-wrapper {
   display: grid;
@@ -334,10 +346,6 @@ p {
 
 .catalogue-item {
   margin: auto;
-}
-
-.catalogue-item a {
-  text-decoration: none;
 }
 
 .catalogue-item a:hover {
@@ -355,6 +363,8 @@ p {
   margin: auto;
 }
 
+/* === ABOUT === */
+
 .about-wrapper {
   max-width: 1080px;
   padding: 0px 32px 32px 32px;
@@ -363,9 +373,18 @@ p {
 
 .about-wrapper a {
   text-decoration: none;
+  line-height: 1.5;
 }
 
-.about-wrapper p:hover {
+.about-wrapper a:link {
+  color: #737373;
+}
+
+.about-wrapper a:visited {
+  color: #737373;
+}
+
+.about-wrapper a:hover {
   color: #80e0ff;
 }
 
@@ -379,6 +398,8 @@ p {
   margin: 0px 0px 28px 28px;
   float: right;
 }
+
+/* === FOOTER === */
 
 .footer {
   bottom: 0;

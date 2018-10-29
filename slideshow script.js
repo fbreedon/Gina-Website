@@ -6,11 +6,12 @@ function slideShow() {
 	var i;
 	var slides = document.getElementsByClassName("slide-img");
 
-	// Set the css display value for each slide to "none"
+	// Set the display value for each slide to "none"
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
 
+	// Increment the slideshow
 	slideIndex++;
 
 	// Loop back to the first image after reaching the last image
