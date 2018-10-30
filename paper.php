@@ -3,9 +3,9 @@
 
   <head>
   	<meta charset="utf-8">
-  	<link rel="stylesheet" type="text/css" href="style.css">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  	<title>Painting | Gina Werfel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  	<title>Paper | Gina Werfel</title>
   </head>
 
   <body>
@@ -14,11 +14,11 @@
       <a class="title" href="./index.html">Gina Werfel</a>
       <div class="container">
       	<nav class="navigation">
-      	  <a href="./painting.php" class="active">Painting</a>
-      	  <a href="./paper.html">Work On Paper</a>
+      	  <a href="./painting.html">Painting</a>
+      	  <a href="./paper.php" class="active">Work On Paper</a>
       	  <a href="./public art.html">Public Art</a>
       	  <a href="./archive.html">Archive</a>
-      	  <!--a href="./reviews.html">Publications</a-->
+          <!--a href="./reviews.html">Publications</a-->
       	  <a href="./news.html">Press</a>
       	  <a href="./about.html">About</a>
       	</nav>
@@ -37,7 +37,7 @@
           <!-- Php to read the image files and display them in the gallery -->
           <?php
           // Define the path to the image directory
-          $img_path = 'images/paintings/';
+          $img_path = 'images/works on paper/';
           // Get all the files that are images
           $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
           // Open the image folder and store it in a variable
@@ -76,7 +76,7 @@
         <!-- Php to read the info files and display them under their images -->
           <?php
           // Grab all the text files from the directory and store them in an array
-          foreach (glob("images/paintings/info/*.txt") as $info_file) {
+          foreach (glob("images/works on paper/info/*.txt") as $info_file) {
             // Open and read the current file in the array
             $file_handle = fopen($info_file, "r");
           ?>
@@ -93,7 +93,7 @@
           }
           ?>
         </div>
-
+        
         <!-- Gallery container for the bottom navigation-->
         <!-- Click an image to jump to it, use overflow to scroll through them -->
         <div class="gallery-nav">
@@ -105,7 +105,7 @@
           <!-- Php to read the icon files and display them in the nav bar -->
           <?php
           // Define the path to the icon directory
-          $icon_path = 'images/paintings/icons/';
+          $icon_path = 'images/works on paper/icons/';
           // Get all the files that are images
           $num_icon_files = glob($icon_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
           // Open the image folder and store it in a variable
