@@ -337,6 +337,31 @@ p {
 
 /* === PRESS === */
 
+.collapsible {
+  cursor: pointer;
+}
+
+a.collapsible.active {
+  color: #00a3cc;
+}
+
+.collapsible-content {
+  padding: 4px 12px;
+  display: none;
+  background-color: #f1f1f1;
+}
+
+.collapsible-content p {
+  display: inline-block;
+}
+
+.collapsible-content img {
+  float: right;
+  margin-left: 12px;
+  max-width: 250px;
+  max-height: 250px;
+}
+
 .catalogue-wrapper {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -374,6 +399,7 @@ p {
 .about-wrapper a {
   text-decoration: none;
   line-height: 1.5;
+  color: #737373;
 }
 
 .about-wrapper a:link {
