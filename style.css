@@ -146,6 +146,10 @@ p {
   margin: auto;
 }
 
+.wide {
+  height: 75%;
+}
+
 /* === GALLERY NAVIGATION === */
 
 .prev-img, .next-img {
