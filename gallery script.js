@@ -13,24 +13,21 @@ function currentImg(n) {
 	showImgs(imgIndex = n);
 }
 
-// Take in an integer, create variables for the images, icons, and info, set
-// the image index, clear all the images and infos, remove the highlight, then
-// set the correct image and info to show
+// Take in an integer, create variables for the images, icons, info, and tabs,
+// set the image index, clear all the images and infos, remove the highlight,
+// then set the correct image and info to show
 function showImgs(n) {
 	var i;
 	var x = document.getElementsByClassName("gallery-img");
 	var icons = document.getElementsByClassName("gallery-icon");
 	var info = document.getElementsByClassName("info");
+	//var tablinks = document.getElementsByClassName("tab-link");
 
 	// Loop back to the first image when clicking next on the last image
-	if (n > x.length) {
-		imgIndex = 1;
-	}
+	if (n > x.length) {imgIndex = 1;}
 
 	// Loop forward to the last image when clicking prev on the first image
-	if (n < 1) {
-		imgIndex = x.length;
-	}
+	if (n < 1) {imgIndex = x.length;}
 
 	// Set the display value for each image to "none"
 	for (i = 0; i < x.length; i++) {
@@ -38,10 +35,20 @@ function showImgs(n) {
 	}
 
 	// Set the display value for each info to "none"
-	// This is a seperate function in case there's a different number of infos and images
-	for (i = 0; i < info.length; i++) {
-		info[i].style.display = "none";
+	// This is a seperate function in case there is no info
+	if(info.length > 0) {
+		for (i = 0; i < info.length; i++) {
+			info[i].style.display = "none";
+		}
 	}
+
+	// Check that there are tabs,
+	// then get rid of the active class in each tab index
+	/*if (tablinks.length > 0) {
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+	}*/
 
 	// Remove the highlight from the icons
 	for (i = 0; i < icons.length; i++) {
@@ -52,6 +59,19 @@ function showImgs(n) {
 	x[imgIndex-1].style.display = "block";
 	// Add "highlight" to the current nav icon's class name
 	icons[imgIndex-1].className += " highlight";
-	// Set the current image's info display value to "block"
-	info[imgIndex-1].style.display = "block";
+	// Check that there is info, 
+	// then set the current image's info display value to "block"
+	if(info.length > 0) {info[imgIndex-1].style.display = "block";}
+	// Check that there are tabs, find out which tab the current image belongs to,
+	// then set the correct tab to be active if it isn't already active
+	/*if (tablinks.length > 0) {
+		if (x[imgIndex-1].className = "gallery-img first" &&
+			tablinks[0].className != "tab-link active") {
+			tablinks[0].className += " active";
+		}
+		if (x[imgIndex-1].className = "gallery-img second" &&
+			tablinks[1].className != "tab-link active") {
+			tablinks[1].className += " active";
+		}
+	}*/
 }

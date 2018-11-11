@@ -5,7 +5,7 @@
   	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  	<title>Paper | Gina Werfel</title>
+  	<title>Works on Paper | Gina Werfel</title>
   </head>
 
   <body>
@@ -14,10 +14,10 @@
       <a class="title" href="./index.html">Gina Werfel</a>
       <div class="container">
       	<nav class="navigation">
-      	  <a href="./painting.html">Painting</a>
-      	  <a href="./paper.html" class="active">Works On Paper</a>
+      	  <a href="./painting.php">Paintings</a>
+      	  <a href="./paper.php" class="active">Works On Paper</a>
       	  <a href="./public art.html">Special Projects</a>
-      	  <a href="./archive.html">Archive</a>
+      	  <a href="./archive.php">Archive</a>
           <!--a href="./reviews.html">Publications</a-->
       	  <a href="./news.html">Press</a>
       	  <a href="./about.html">About</a>

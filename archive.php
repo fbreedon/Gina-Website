@@ -14,10 +14,10 @@
       <a class="title" href="./index.html">Gina Werfel</a>
       <div class="container">
       	<nav class="navigation">
-      	  <a href="./painting.html">Painting</a>
-      	  <a href="./paper.html">Works On Paper</a>
+      	  <a href="./painting.php">Paintings</a>
+      	  <a href="./paper.php">Works On Paper</a>
       	  <a href="./public art.html">Special Projects</a>
-      	  <a href="./archive.html" class="active">Archive</a>
+      	  <a href="./archive.php" class="active">Archive</a>
           <!--a href="./reviews.html">Publications</a-->
       	  <a href="./news.html">Press</a>
       	  <a href="./about.html">About</a>
@@ -39,7 +39,7 @@
         <!-- Php to read the image files and display them in the archive grid -->
         <?php
         // Define the path to the image directory
-        $img_path = 'images/abstractions/';
+        $img_path = 'images/archive/abstractions/';
         // Get all the files that are images
         $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
         // Open the image folder and store it in a variable
@@ -82,7 +82,7 @@
         <!-- Php to read the image files and display them in the archive grid -->
         <?php
         // Define the path to the image directory
-        $img_path = 'images/landscapes/';
+        $img_path = 'images/archive/landscapes/';
         // Get all the files that are images
         $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
         // Open the image folder and store it in a variable
@@ -131,7 +131,7 @@
         <!-- Php to read the image files and display them in the modal -->
         <?php
         // Define the path to the image directory
-        $img_path = 'images/abstractions/';
+        $img_path = 'images/archive/abstractions/';
         // Get all the files that are images
         $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
         // Open the image folder and store it in a variable
@@ -166,7 +166,7 @@
         <!-- Php to read the image files and display them in the modal -->
         <?php
         // Define the path to the image directory
-        $img_path = 'images/landscapes/';
+        $img_path = 'images/archive/landscapes/';
         // Get all the files that are images
         $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
         // Open the image folder and store it in a variable
@@ -203,7 +203,7 @@
           <!-- Php to read the info files and display them under their images -->
           <?php
           // Grab all the text files from the directory and store them in an array
-          foreach (glob("images/abstractions/info/*.txt") as $info_file) {
+          foreach (glob("images/archive/abstractions/info/*.txt") as $info_file) {
             // Open and read the current file in the array
             $file_handle = fopen($info_file, "r");
           ?>
@@ -224,7 +224,7 @@
           <!-- Php to read the info files and display them under their images -->
           <?php
           // Grab all the text files from the directory and store them in an array
-          foreach (glob("images/landscapes/info/*.txt") as $info_file) {
+          foreach (glob("images/archive/landscapes/info/*.txt") as $info_file) {
             // Open and read the current file in the array
             $file_handle = fopen($info_file, "r");
           ?>

@@ -14,7 +14,7 @@ function openTab(event, tabName) {
 	}
 
 	// Set the clicked tab to display in a grid and add the active class to it
-	document.getElementById(tabName).style.display = "inline-grid";
+	document.getElementById(tabName).style.display = "block";
 	event.currentTarget.className += " active";
 }
 
