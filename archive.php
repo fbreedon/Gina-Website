@@ -184,7 +184,7 @@
             if($img_extension=='jpg' || $img_extension =='png' || 
                $img_extension == 'gif' || $img_extension == 'bmp') {
         ?>
-              <img class="modal-img" src="<?php echo $img_file_path; ?>" />
+              <img class="modal-img wide" src="<?php echo $img_file_path; ?>" />
               <?php
             }
           }   // Done with the current file

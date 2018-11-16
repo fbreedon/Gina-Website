@@ -40,13 +40,15 @@ function showModal(n) {
 		images[i].style.display = "none";
 	}
 
-	// Set the display value for each info to "none"
-	for (i = 0; i < captionText.length; i++) {
-		captionText[i].style.display = "none";
+	// Check that there is info, and set the display value for each info to "none"
+	if(captionText.length > 0) {
+		for (i = 0; i < captionText.length; i++) {
+			captionText[i].style.display = "none";
+		}
 	}
 
 	// Set the current image's display value to "block"
 	images[modalIndex-1].style.display = "block";
-	// Set the current image's info display value to "block"
-	captionText[modalIndex-1].style.display = "block";
+	// Check that there is info, and set the current image's info display value to "block"
+	if(captionText.length > 0) {captionText[modalIndex-1].style.display = "block";}
 }
