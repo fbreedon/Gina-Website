@@ -11,7 +11,7 @@
   <body>
 
     <header class="header">
-      <a class="title" href="./index.html">Gina Werfel</a>
+      <a class="title" href="/">Gina Werfel</a>
       <div class="container">
       	<nav class="navigation">
       	  <a href="./painting.php">Paintings</a>
