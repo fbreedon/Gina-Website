@@ -4,13 +4,42 @@
   INTRODUCTION
   ============
   
-  This is a guide on how to edit your site. When you
-  edit the site, the changes will not appear on it
-  until you reupload the site to the server using an
-  FTP manager. If I have not shown you how to do this,
-  contact me at fzbreedon@gmail.com, and I will show
-  you how to do it, or do it for you.
-
+  This is a guide on how to edit your site. Some of the
+  editing can be done directly in the Bluehost File
+  Manager, while the rest must be done using other
+  programs.
+  
+  To navigate to the File Manager, follow these steps:
+  
+    1)  Go to www.bluehost.com.
+    2)  Login to your account.
+    3)  Under "Advanced" click on "File Manager."
+  
+  To upload new or edited files onto your site:
+    
+    1)  In the File Manager, navigate to the folder
+        that you want to add the files to. All the site
+        files are located in "public_html."
+    2)  In the top bar, click on "Upload". A new tab
+        will open.
+    3)  Drag and drop each file one by one that you want
+        to add into the dotted box; or, click on the
+        "Select File" button and choose the file you
+        want to add.
+    4)  If you are uploading an edited copy of a file
+        already on the site, a warning window will pop
+        up. Click on "Yes" to replace the old file with
+        the new version. You can also check the
+        "Overwrite existing files" box beforehand to
+        skip this part.
+        
+  NOTE: I have had issues with the drag and drop system
+        when uploading images. Make sure to add images
+        one by one, not all at once. If the file or files
+        fail to upload because they are too big, you will
+        have to compress the files and upload the .zip
+        file instead.
+  
   IMAGES
   ============
   

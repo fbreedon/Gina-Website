@@ -38,41 +38,18 @@
       <div id="Abstractions" class="archive-grid tab-content">
         <!-- Php to read the image files and display them in the archive grid -->
         <?php
-        // Define the path to the image directory
-        $img_path = 'images/archive/abstractions/';
-        // Get all the files that are images
-        $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
-        // Open the image folder and store it in a variable
-        $img_folder = opendir($img_path);
         // Define a count for the onclick function
         $count = 1;
-
-        // Make sure there were files to grab
-        if($num_img_files > 0) {
-          // Read each file until there are no more files
-          while(false !== ($img_file = readdir($img_folder))) {
-            // Define the path to the current file
-            $img_file_path = $img_path.$img_file;
-            // Convert the extension string of the file to lowercase
-            $img_extension = strtolower(pathinfo($img_file ,PATHINFO_EXTENSION));
-            // Make sure the file is an image
-            if($img_extension=='jpg' || $img_extension =='png' || 
-               $img_extension == 'gif' || $img_extension == 'bmp') {
+        // Find all the image file paths in the directory and store them in an array,
+        // then display each one properly in the grid as a clickable image
+        foreach (glob("images/archive/abstractions/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
-              <img class="archive-img" onclick="openModal();currentModal(<?php echo $count ?>)" 
-                src="<?php echo $img_file_path; ?>" />
-              <?php
-              // Increment the count
-              $count++;
-            }
-          }   // Done with the current file
-        }     // Done with all the files
-        // There were no matching files
-        else {
-          echo "No Images Found";
+          <img class="archive-img" onclick="openModal();currentModal(<?php echo $count ?>)" 
+               src="<?php echo $img_file; ?>" />
+          <?php
+          // Increment the count
+          $count++;
         }
-        // Close the opened directory
-        closedir($img_folder);
         ?>
       </div>
 
@@ -81,39 +58,15 @@
       <div id="Landscapes" class="archive-grid tab-content">
         <!-- Php to read the image files and display them in the archive grid -->
         <?php
-        // Define the path to the image directory
-        $img_path = 'images/archive/landscapes/';
-        // Get all the files that are images
-        $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
-        // Open the image folder and store it in a variable
-        $img_folder = opendir($img_path);
-
-        // Make sure there were files to grab
-        if($num_img_files > 0) {
-          // Read each file until there are no more files
-          while(false !== ($img_file = readdir($img_folder))) {
-            // Define the path to the current file
-            $img_file_path = $img_path.$img_file;
-            // Convert the extension string of the file to lowercase
-            $img_extension = strtolower(pathinfo($img_file ,PATHINFO_EXTENSION));
-            // Make sure the file is an image
-            if($img_extension=='jpg' || $img_extension =='png' || 
-               $img_extension == 'gif' || $img_extension == 'bmp') {
+        // Do the same as above, but for images in landscapes
+        foreach (glob("images/archive/landscapes/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
-              <img class="archive-img" onclick="openModal();currentModal(<?php echo $count ?>)" 
-                src="<?php echo $img_file_path; ?>" />
-              <?php
-              // Increment the count
-              $count++;
-            }
-          }   // Done with the current file
-        }     // Done with all the files
-        // There were no matching files
-        else {
-          echo "No Images Found";
+          <img class="archive-img" onclick="openModal();currentModal(<?php echo $count ?>)" 
+               src="<?php echo $img_file; ?>" />
+          <?php
+          // Increment the count
+          $count++;
         }
-        // Close the opened directory
-        closedir($img_folder);
         ?>
       </div>
     </div>
@@ -130,71 +83,24 @@
         <!-- Abstraction modal images -->
         <!-- Php to read the image files and display them in the modal -->
         <?php
-        // Define the path to the image directory
-        $img_path = 'images/archive/abstractions/';
-        // Get all the files that are images
-        $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
-        // Open the image folder and store it in a variable
-        $img_folder = opendir($img_path);
-
-        // Make sure there were files to grab
-        if($num_img_files > 0) {
-          // Read each file until there are no more files
-          while(false !== ($img_file = readdir($img_folder))) {
-            // Define the path to the current file
-            $img_file_path = $img_path.$img_file;
-            // Convert the extension string of the file to lowercase
-            $img_extension = strtolower(pathinfo($img_file ,PATHINFO_EXTENSION));
-            // Make sure the file is an image
-            if($img_extension=='jpg' || $img_extension =='png' || 
-               $img_extension == 'gif' || $img_extension == 'bmp') {
+        // Find all the image file paths in the directory and store them in an array,
+        // then display each one properly in the modal
+        foreach (glob("images/archive/abstractions/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
-              <img class="modal-img" src="<?php echo $img_file_path; ?>" />
-              <?php
-            }
-          }   // Done with the current file
-        }     // Done with all the files
-        // There were no matching files
-        else {
-          echo "No Images Found";
+          <img class="modal-img" src="<?php echo $img_file; ?>" />
+          <?php
         }
-        // Close the opened directory
-        closedir($img_folder);
         ?>
 
         <!-- Landscape modal images -->
         <!-- Php to read the image files and display them in the modal -->
         <?php
-        // Define the path to the image directory
-        $img_path = 'images/archive/landscapes/';
-        // Get all the files that are images
-        $num_img_files = glob($img_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
-        // Open the image folder and store it in a variable
-        $img_folder = opendir($img_path);
-
-        // Make sure there were files to grab
-        if($num_img_files > 0) {
-          // Read each file until there are no more files
-          while(false !== ($img_file = readdir($img_folder))) {
-            // Define the path to the current file
-            $img_file_path = $img_path.$img_file;
-            // Convert the extension string of the file to lowercase
-            $img_extension = strtolower(pathinfo($img_file ,PATHINFO_EXTENSION));
-            // Make sure the file is an image
-            if($img_extension=='jpg' || $img_extension =='png' || 
-               $img_extension == 'gif' || $img_extension == 'bmp') {
+        // Do the same as above, but for images in landscapes, and with a wide styling
+        foreach (glob("images/archive/landscapes/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
-              <img class="modal-img wide" src="<?php echo $img_file_path; ?>" />
-              <?php
-            }
-          }   // Done with the current file
-        }     // Done with all the files
-        // There were no matching files
-        else {
-          echo "No Images Found";
+          <img class="modal-img wide" src="<?php echo $img_file; ?>" />
+          <?php
         }
-        // Close the opened directory
-        closedir($img_folder);
         ?>
         
         <!-- Gallery container for the image information -->
@@ -202,7 +108,7 @@
           <!-- Abstraction image caption information -->
           <!-- Php to read the info files and display them under their images -->
           <?php
-          // Grab all the text files from the directory and store them in an array
+          // Find all the text file paths in the directory and store them in an array
           foreach (glob("images/archive/abstractions/info/*.txt") as $info_file) {
             // Open and read the current file in the array
             $file_handle = fopen($info_file, "r");
@@ -223,7 +129,7 @@
           <!-- Landscape image caption information -->
           <!-- Php to read the info files and display them under their images -->
           <?php
-          // Grab all the text files from the directory and store them in an array
+          // Find all the text file paths in the directory and store them in an array
           foreach (glob("images/archive/landscapes/info/*.txt") as $info_file) {
             // Open and read the current file in the array
             $file_handle = fopen($info_file, "r");
