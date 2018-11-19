@@ -5,6 +5,7 @@
   	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="keywords" content="Gina Werfel, Prince Street Gallery, Artist">
   	<title>Works on Paper | Gina Werfel</title>
   </head>
 
