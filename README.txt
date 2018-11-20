@@ -102,6 +102,8 @@
             order, simply rename the image file to the
             numerical place you want it. Make sure to re-
             name all other files affected by the move.
+            Click on "Reload" in the top menu bar to see
+            the changes.
             
             When you move an image, you must also move the
             image's icon and information to the same
