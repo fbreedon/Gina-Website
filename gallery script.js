@@ -13,6 +13,22 @@ function currentImg(n) {
 	showImgs(imgIndex = n);
 }
 
+function tabHighlight(n) {
+	var tab1 = document.getElementById("tab-1");
+	var tab2 = document.getElementById("tab-2");
+	tab1.className = tab1.className.replace(" active", "");
+	tab2.className = tab2.className.replace(" active", "");
+	
+	if (n == 1) {
+		tab1.className += " active";
+		tab2.className = tab2.className.replace(" active", "");
+	}
+	else if (n == 2) {
+		tab2.className += " active";
+		tab1.className = tab1.className.replace(" active", "");
+	}
+}
+
 // Take in an integer, create variables for the images, icons, info, and tabs,
 // set the image index, clear all the images and infos, remove the highlight,
 // then set the correct image and info to show
@@ -65,13 +81,15 @@ function showImgs(n) {
 	// Check that there are tabs, find out which tab the current image belongs to,
 	// then set the correct tab to be active if it isn't already active
 	/*if (tablinks.length > 0) {
-		if (x[imgIndex-1].className = "gallery-img first" &&
+		if (x[imgIndex-1].className == "gallery-img first" &&
 			tablinks[0].className != "tab-link active") {
 			tablinks[0].className += " active";
 		}
-		if (x[imgIndex-1].className = "gallery-img second" &&
+		if (x[imgIndex-1].className == "gallery-img second" &&
 			tablinks[1].className != "tab-link active") {
 			tablinks[1].className += " active";
 		}
 	}*/
 }
+
+document.getElementById("tab-1").click();

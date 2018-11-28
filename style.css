@@ -137,11 +137,17 @@ p {
 .gallery-description {
   text-align: center;
   line-height: 140%;
-  padding: 20% 6% 0 6%;
+  padding: 10% 6% 0 6%;
   border-style: solid;
   border-width: 4px;
   border-color: #e6e6e6;
   background-color: #fbfbfb;
+}
+
+.gallery-description img {
+  display: block;
+  height: 250px;
+  margin: auto;
 }
 
 /* === GALLERY NAVIGATION === */

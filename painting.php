@@ -6,6 +6,7 @@
   	<link rel="stylesheet" type="text/css" href="style.css">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta name="keywords" content="Gina Werfel, Prince Street Gallery, Artist">
+    <link rel="shortcut icon" href="./images/Duet Favicon.jpg" type="image/jpg">
   	<title>Paintings | Gina Werfel</title>
   </head>
 
