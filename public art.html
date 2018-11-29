@@ -27,22 +27,93 @@
       </div>
     </header>
 
+    <!-- Archive wrapper pads the margins from the header and footer, differently from content wrapper -->
+    <div class="archive-wrapper">
+      <h2>Clearing</h2>
+      <p><i>Clearing</i> in R. Burnett Miller Park in Sacramento CA consists of seven porcelain enamel panels which, like pieces of a puzzle, interlock to reproduce an abstract painting, entitled Thicket, which emerges as visitors interact with the installation. Ranging in height from eighteen inches to six feet, the panels integrate the artwork on their front sides with the living landscape behind to create composite abstractions; on the reverse, the panels occupy space as monolithic blocks of color.</p>
+      <p>Assisted by Galen Pardee</p>
+      <p>Fabricator: KVO Industries, Santa Rosa CA</p>
+      <p>Photography by Joan Cusick And Injinash Unshin</p><br>
+      <!-- Clearing archive image grid -->
+      <div id="Clearing" class="archive-grid tab-content">
+        <img class="archive-img" onclick="openModal();currentModal(1)" src="./images/public art/JCP_0746-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(2)" src="./images/public art/JCP_0782-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(3)" src="./images/public art/JCP_0787-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(4)" src="./images/public art/JCP_0807-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(5)" src="./images/public art/JCP_0829-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(6)" src="./images/public art/11_o.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(7)" src="./images/public art/JCP_0841-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(8)" src="./images/public art/JCP_0845-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(9)" src="./images/public art/JCP_0952-X3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(10)" src="./images/public art/3_o.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(11)" src="./images/public art/7_o.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(12)" src="./images/public art/Thicket.jpg">
+      </div>
+
+      <h2>Rug Project</h2>
+      <p>Werfel was approached by Mehraban Rugs in the spring of 2018 about the possibility of rendering her painting <i>Roma</i> in a fine art rug. This collaboration is part of an effort by Mehraban to close the gap between the arts. Mehraban was attracted to Werfel's color palette, lively lines and composition. The product allows collectors to own a version of <i>Roma</i> and experience the work in a new, more tactile way. Longstanding Los Angeles rug dealers, Mehraban was originally established in Tehran in 1945. They have been a fixture in the design scene on La Cienega Blvd in Los Angeles for more than thirty-five years.</p>
+      <p>The rug woven from Werfel's artwork is a 150 knot Tibetan Carpet. This is the highest quality Tibetan knot rug. It is woven in Mehraban's workshop in Kathmandu, Nepal. The content is 50% Tibetan handspan wool and 50% Chinese raw silk. It is being woven in a 9’ x 12’ size.</p><br>
+      <!-- Upcoming archive image grid -->
+      <div id="Upcoming" class="archive-grid tab-content">
+        <img class="archive-img" onclick="openModal();currentModal(13)" src="./images/public art/Roma Visualization.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(14)" src="./images/public art/Roma in Room 1.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(15)" src="./images/public art/IMG_6602.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(16)" src="./images/public art/IMG_6601.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(17)" src="./images/public art/IMG_6600.jpg">
+      </div>
+
+      <!-- Archive container for the pop-up modal -->
+      <!-- Click an image in the archive to open an overlay with a bigger image -->
+      <div id="modal" class="archive-modal">
+        <!-- X in the top right corner to close the modal -->
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <!-- Modal navigation by clicking to the right or left of images -->
+        <a class="prev-img" onclick="plusModal(-1)"></a>
+        <a class="next-img" onclick="plusModal(1)"></a>
+        <div class="modal-content">
+          <!-- Clearing modal images -->
+          <img class="modal-img wide" src="./images/public art/JCP_0746-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0782-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0787-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0807-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0829-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/11_o.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0841-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0845-X3.jpg">
+          <img class="modal-img wide" src="./images/public art/JCP_0952-X3.jpg">
+          <img class="modal-img" src="./images/public art/3_o.jpg">
+          <img class="modal-img" src="./images/public art/7_o.jpg">
+          <img class="modal-img" src="./images/public art/Thicket.jpg">
+
+          <!-- Upcoming modal images -->
+          <img class="modal-img wide" src="./images/public art/Roma Visualization.jpg">
+          <img class="modal-img wide" src="./images/public art/Roma in Room 1.jpg">
+          <img class="modal-img" src="./images/public art/IMG_6602.jpg">
+          <img class="modal-img" src="./images/public art/IMG_6601.jpg">
+          <img class="modal-img" src="./images/public art/IMG_6600.jpg">
+        </div>
+      </div>
+    </div>
+
+    <!-- Call the archive modal script -->
+    <script src="archive modal script.js"></script>
+
     <!-- Content wrapper pads the margins from the header and footer -->
-    <div class="content-wrapper">
+    <!--div class="content-wrapper"-->
       <!-- Tab Container -->
-      <div class="tab">
+      <!--div class="tab">
         <a id="tab-1" class="tab-link" onclick="currentImg(1);tabHighlight(1)">Public Art</a>
         <a id="tab-2" class="tab-link" onclick="currentImg(14);tabHighlight(2)">Rug Project</a>
-      </div>
+      </div-->
       <!-- Clearing tab gallery container -->
-      <div class="gallery">
+      <!--div class="gallery"-->
         <!-- Gallery navigation by clicking to the right or left of images -->
-        <a class="prev-img" onclick="plusImg(-1)"></a>
-        <a class="next-img" onclick="plusImg(1)"></a>
+        <!--a class="prev-img" onclick="plusImg(-1)"></a>
+        <a class="next-img" onclick="plusImg(1)"></a-->
         <!-- Gallery container for images -->
-        <div class="gallery-main">
+        <!--div class="gallery-main"-->
           <!-- Gallery images -->
-          <div class="gallery-img first gallery-description">
+          <!--div class="gallery-img first gallery-description">
             <h2>Clearing</h2>
             <p>CLEARING in R. Burnett Miller Park in Sacramento CA consists of seven porcelain enamel panels which, like pieces of a puzzle, interlock to reproduce an abstract painting, entitled Thicket, which emerges as visitors interact with the installation. Ranging in height from eighteen inches to six feet, the panels integrate the artwork on their front sides with the living landscape behind to create composite abstractions; on the reverse, the panels occupy space as monolithic blocks of color.</p>
             <p>Assisted by Galen Pardee</p>
@@ -51,7 +122,6 @@
             <img src="./images/public art/Thicket.jpg">
           </div>
           <img class="gallery-img first" src="./images/public art/JCP_0746-X3.jpg">
-          <img class="gallery-img first" src="./images/public art/JCP_0768-X3.jpg">
           <img class="gallery-img first" src="./images/public art/JCP_0782-X3.jpg">
           <img class="gallery-img first" src="./images/public art/JCP_0787-X3.jpg">
           <img class="gallery-img first" src="./images/public art/JCP_0807-X3.jpg">
@@ -71,18 +141,18 @@
           <img class="gallery-img second" src="./images/public art/Roma in Room 1.jpg">
           <img class="gallery-img second" src="./images/public art/IMG_6602.jpg">
           <img class="gallery-img second" src="./images/public art/IMG_6601.jpg">
-          <img class="gallery-img second" src="./images/public art/IMG_6600.jpg">
+          <img class="gallery-img second" src="./images/public art/IMG_6600.jpg"-->
 
         <!-- Gallery container for the bottom navigation-->
         <!-- Click an image to jump to it, use overflow to scroll through them -->
-        <div class="gallery-nav">
+        <!--div class="gallery-nav"-->
           <!-- Gallery container for the main buttons that go to the next image -->
-          <div class="gallery-buttons">
+          <!--div class="gallery-buttons">
             <a class="prev-button" onclick="plusImg(-1)">❮</a>
             <a class="next-button" onclick="plusImg(1)">❯</a>
-          </div>
+          </div-->
           <!-- Gallery navigation icon buttons -->
-          <img class="gallery-icon" onclick="currentImg(1)" src="./images/public art/icons/Clearing icon.png">
+          <!--img class="gallery-icon" onclick="currentImg(1)" src="./images/public art/icons/Clearing icon.png">
           <img class="gallery-icon" onclick="currentImg(2)" src="./images/public art/icons/JCP_0746-X3 icon.jpg">
           <img class="gallery-icon" onclick="currentImg(3)" src="./images/public art/icons/JCP_0768-X3 icon.jpg">
           <img class="gallery-icon" onclick="currentImg(4)" src="./images/public art/icons/JCP_0782-X3 icon.jpg">
@@ -102,10 +172,10 @@
           <img class="gallery-icon" onclick="currentImg(18)" src="./images/public art/icons/IMG_6600 icon.jpg">
         </div>
       </div>
-    </div>
+    </div-->
 
     <!-- Call the gallery script -->
-    <script src="gallery script.js"></script>
+    <!--script src="gallery script.js"></script-->
 
     <!-- Page footer for copyright and social media info -->
     <footer class="footer">
