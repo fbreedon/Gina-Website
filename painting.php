@@ -113,8 +113,8 @@
         <div class="gallery-nav">
           <!-- Gallery container for the main buttons that go to the next image -->
           <div class="gallery-buttons">
-            <a class="prev-button" onclick="plusImg(-1)">❮</a>
-            <a class="next-button" onclick="plusImg(1)">❯</a>
+            <a class="prev-button" onclick="plusNav(-1)">❮</a>
+            <a class="next-button" onclick="plusNav(1)">❯</a>
           </div>
           <!-- Php to read the icon files and display them in the nav bar -->
           <?php

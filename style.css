@@ -187,12 +187,12 @@ p {
 
 .gallery-nav {
   height: 140px;
-  width: 700px;
+  width: 742px;
   min-width: 360px;
   margin: auto;
   margin-top: 32px;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 

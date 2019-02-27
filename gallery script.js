@@ -1,4 +1,5 @@
 var imgIndex = 1;
+var navIndex = 1;
 showImgs(imgIndex);
 
 // Take in an integer and increase the image index that many times
@@ -13,7 +14,12 @@ function currentImg(n) {
 	showImgs(imgIndex = n);
 }
 
-function tabHighlight(n) {
+// Take in an integer and move the navigation icons by that many sets of six
+function plusNav(n) {
+	showNav(navIndex += n);
+}
+
+/*function tabHighlight(n) {
 	var tab1 = document.getElementById("tab-1");
 	var tab2 = document.getElementById("tab-2");
 	tab1.className = tab1.className.replace(" active", "");
@@ -27,7 +33,7 @@ function tabHighlight(n) {
 		tab2.className += " active";
 		tab1.className = tab1.className.replace(" active", "");
 	}
-}
+}*/
 
 // Take in an integer, create variables for the images, icons, info, and tabs,
 // set the image index, clear all the images and infos, remove the highlight,
@@ -73,8 +79,35 @@ function showImgs(n) {
 
 	// Set the current image's display value to "block"
 	x[imgIndex-1].style.display = "block";
+
+	// Determine which set of six icons needs to be displayed and
+	// update the navigation index
+	switch (true) {
+		// The first six images
+		case imgIndex > 0 && imgIndex <= 6:
+			navIndex = 1;
+			break;
+		// The second six images
+		case imgIndex > 6 && imgIndex <= 12:
+			navIndex = 2;
+			break;
+		// The third six images
+		case imgIndex > 12 && imgIndex <= 18:
+			navIndex = 3;
+			break;
+		// The last images, with wiggle room between 18 and 24 images
+		case imgIndex > 18 && imgIndex <= icons.length:
+			navIndex = 4;
+			break;
+	}
+
+	// Call the showNav function to display the correct set of icons based on
+	// the navigation index
+	showNav(navIndex);
+
 	// Add "highlight" to the current nav icon's class name
 	icons[imgIndex-1].className += " highlight";
+
 	// Check that there is info, 
 	// then set the current image's info display value to "block"
 	if(info.length > 0) {info[imgIndex-1].style.display = "block";}
@@ -92,4 +125,60 @@ function showImgs(n) {
 	}*/
 }
 
-document.getElementById("tab-1").click();
+//
+function showNav(n) {
+	var icons = document.getElementsByClassName("gallery-icon");
+
+	// Loop back to the first icon set when clicking next on the last set
+	if (n > Math.ceil(icons.length / 6)) {navIndex = 1;}
+
+	// Loop forward to the last icon set when clicking prev on the first set
+	if (n < 1) {navIndex = Math.ceil(icons.length / 6);}
+
+	// Set the display value for each icon to "none"
+	for (i = 0; i < icons.length; i++) {
+		icons[i].style.display = "none";
+	}
+
+	// Determine which set of six icons needs to be displayed and display them
+	switch (navIndex) {
+		// The first six images
+		case 1:
+			for (i = 0; i < 6; i++) {
+				icons[i].style.display = "inline-block";
+			}
+			break;
+		// The second six or last few images
+		case 2:
+			if (icons.length > 12) {
+				for (i = 6; i < 12; i++) {
+					icons[i].style.display = "inline-block";
+				}
+			} else {
+				for (i = 6; i < icons.length; i++) {
+					icons[i].style.display = "inline-block";
+				}
+			}
+			break;
+		// The third six or last few images
+		case 3:
+			if (icons.length > 18) {
+				for (i = 12; i < 18; i++) {
+					icons[i].style.display = "inline-block";
+				}
+			} else {
+				for (i = 12; i < icons.length; i++) {
+					icons[i].style.display = "inline-block";
+				}
+			}
+			break;
+		// The last images, with wiggle room between 18 and 24 images
+		case 4:
+			for (i = 18; i < icons.length; i++) {
+				icons[i].style.display = "inline-block";
+			}
+			break;
+	}
+}
+
+//document.getElementById("tab-1").click();
