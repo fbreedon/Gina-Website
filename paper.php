@@ -28,7 +28,7 @@
       	<nav class="navigation">
       	  <a href="./painting.php">Paintings</a>
       	  <a href="./paper.php" class="active">Works On Paper</a>
-      	  <a href="./public art.html">Special Projects</a>
+      	  <a href="./public-art.html">Special Projects</a>
       	  <a href="./archive.php">Archive</a>
           <!--a href="./reviews.html">Publications</a-->
       	  <a href="./news.html">Press</a>
@@ -52,17 +52,17 @@
           // then display each one properly in the gallery as a clickable image
           foreach (glob("images/works on paper/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
           ?>
-            <a href="<?php echo $img_file; ?>">
+            <!--a href="<?php echo $img_file; ?>"-->
               <img class="gallery-img" src="<?php echo $img_file; ?>" />
-            </a>
+            <!--/a-->
             <?php
           }
           // Do the same as above, but for the wide images, and add a styled wide class
           foreach (glob("images/works on paper/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
           ?>
-            <a href="<?php echo $img_file; ?>">
+            <!--a href="<?php echo $img_file; ?>"-->
               <img class="gallery-img wide" src="<?php echo $img_file; ?>" />
-            </a>
+            <!--/a-->
             <?php
           }
           ?>

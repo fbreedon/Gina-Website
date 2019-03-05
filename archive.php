@@ -28,7 +28,7 @@
       	<nav class="navigation">
       	  <a href="./painting.php">Paintings</a>
       	  <a href="./paper.php">Works On Paper</a>
-      	  <a href="./public art.html">Special Projects</a>
+      	  <a href="./public-art.html">Special Projects</a>
       	  <a href="./archive.php" class="active">Archive</a>
           <!--a href="./reviews.html">Publications</a-->
       	  <a href="./news.html">Press</a>
