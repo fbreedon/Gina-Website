@@ -7,6 +7,7 @@
 	6. =PRESS
 	7. =ABOUT
 	8. =FOOTER
+  9. =MOBILE
 */
 
 /* COLORS
@@ -50,7 +51,7 @@ p {
 
 .header {
   text-align: center;
-  min-width: 360px;
+  min-width: 300px;
   margin: auto;
   margin-top: 64px;
 }
@@ -188,7 +189,6 @@ p {
 .gallery-nav {
   height: 140px;
   width: 742px;
-  min-width: 360px;
   margin: auto;
   margin-top: 32px;
   white-space: nowrap;
@@ -244,7 +244,6 @@ p {
 
 .archive-wrapper {
   max-width: 964px;
-  min-width: 360px;
   padding-bottom: 32px;
   margin: auto;
   margin-top: 64px;
@@ -279,6 +278,7 @@ p {
   grid-template-columns: auto auto auto;
   grid-gap: 32px;
   margin-bottom: 32px;
+  width: 100%;
 }
 
 .archive-img {
@@ -446,4 +446,84 @@ a.collapsible.active {
 .footer-left {
   width: 80%;
   margin: auto;
+}
+
+/* === MOBILE ===*/
+
+@media screen and (max-width: 1000px) {
+
+  .archive-grid,
+  .catalogue-wrapper {
+    grid-template-columns: auto auto;
+  }
+
+  .modal-content,
+  .modal-img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .title {
+    font-size: 2.0em;
+  }
+
+  .navigation a {
+    display: inline-block;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .content-wrapper,
+  .slideshow,
+  .gallery,
+  .gallery-main {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+  }
+
+  .slide-img,
+  .gallery-img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prev-img, .next-img {
+    width: 50%;
+  }
+
+  .gallery-nav {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .archive-grid,
+  .catalogue-wrapper {
+    grid-template-columns: auto;
+  }
+
+  .catalogue {
+    width: 200px;
+    height: 250px;
+  }
+
+  .about-img {
+    float: none;
+    margin: auto;
+    margin-top: 16px;
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    max-width: 420px;
+  }
+
 }

@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /images/*
-Disallow: /*.js
+Disallow: 
 
 Sitemap: http://www.ginawerfel.com/sitemap.xml
