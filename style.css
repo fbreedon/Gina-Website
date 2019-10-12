@@ -281,6 +281,12 @@ p {
   width: 100%;
 }
 
+.archive-grid video {
+  max-height: 300px;
+  max-width: 300px;
+  margin: auto;
+}
+
 .archive-img {
   max-height: 300px;
   max-width: 300px;
