@@ -87,6 +87,44 @@ p {
   text-shadow: 1px 1px #80e0ff;
 }
 
+/* === FRONT PAGE ===*/
+
+.banner {
+  display: block;
+  max-width: 800px;
+  margin: auto;
+}
+
+.banner:after {
+  content:  "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.banner h2,
+.banner h3,
+.banner p {
+  margin-top: 1px;
+}
+
+.banner h2 {
+  font-weight: bold;
+  font-family: Tahoma;
+}
+
+.banner h3 {
+  color: #737373;
+}
+
+.banner img {
+  margin-left: -120px;
+}
+
 /* === GALLERY === */
 
 .content-wrapper {
@@ -482,6 +520,17 @@ a.collapsible.active {
     display: inline-block;
     padding-bottom: 8px;
     letter-spacing: 1px;
+  }
+
+  .column {
+    width: 100%;
+    padding: 16px 16px 0 16px;
+  }
+
+  .banner img {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0 16px 0 0;
   }
 
   .content-wrapper,
