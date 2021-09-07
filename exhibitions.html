@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  	<meta name="keywords" content="Gina Werfel, Prince Street Gallery, Artist">
+  	<link rel="icon" href="./images/Galaxy Favicon.jpg" type="image/jpg">
+  	<link rel="shortcut icon" href="./images/Galaxy Favicon.jpg" type="image/jpg">
+  	<link rel="apple-touch-icon" href="./images/Galaxy Favicon.jpg" type="image/jpg">
+  	<meta property="og:image:url" content="http://ginawerfel.com/images/Galaxy-FB-Favicon.jpg">
+  	<meta property="og:image:width" content="1080">
+  	<meta property="og:image:height" content="1080">
+  	<meta property="og:type" content="website">
+  	<meta property="og:url" content="http://ginawerfel.com">
+  	<meta property="og:title" content="Home | Gina Werfel">
+  	<meta property="og:description" content="Gina Werfel is an artist whose painterly abstract paintings derive from moving and interacting with her surroundings.">
+  	<meta property="fb:app_id" content="506666969839633">
+  	<title>Exhibitions | Gina Werfel</title>
+  </head>
+
+  <body>
+
+    <!-- The navigation bar at the top of the screen -->
+    <header class="homepage header">
+      <a class="title" href="/">Gina Werfel</a>
+      <div class="container">
+        <nav class="homepage navigation">
+          <a href="./painting.php">Paintings</a>
+          <a href="./paper.php">Works On Paper</a>
+          <a href="./exhibitions.html" class="active">Exhibitions</a>
+          <a href="./public-art.html">Special Projects</a>
+          <a href="./archive.php">Archive</a>
+          <a href="./news.html">Press</a>
+          <a href="./about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Archive wrapper pads the margins from the header and footer, differently from content wrapper -->
+    <div class="archive-wrapper">
+
+      <!-- Prince Street Gallery show section -->
+      <h2>Prince Street Gallery</h2>
+      <!-- Image grid using the same grid as archive -->
+      <div id="Prince" class="archive-grid">
+        <img class="archive-img" onclick="openModal();currentModal(1)" src="./images/shows/Prince Street Gallery/2PT866B5.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(2)" src="./images/shows/Prince Street Gallery/Plunge_darker.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(3)" src="./images/shows/Prince Street Gallery/Tapestry 40_x30_, oil and spray paint, 2021.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(4)" src="./images/shows/Prince Street Gallery/IMG_1925.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(5)" src="./images/shows/Prince Street Gallery/Child's_Horse  60x48  (1).jpg">
+        <img class="archive-img" onclick="openModal();currentModal(6)" src="./images/shows/Prince Street Gallery/Figure 60_x48_.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(7)" src="./images/shows/Prince Street Gallery/IMG_1908 (5).jpg">
+        <img class="archive-img" onclick="openModal();currentModal(8)" src="./images/shows/Prince Street Gallery/IMG_1920 (2) (1).jpg">
+        <img class="archive-img" onclick="openModal();currentModal(9)" src="./images/shows/Prince Street Gallery/Intersection _web.jpg">
+      </div>
+
+      <!-- Oakland City Center show section -->
+      <h2>Oakland City Center</h2>
+      <!-- Image grid using the same grid as archive -->
+      <div id="Oakland" class="archive-grid">
+        <img class="archive-img" onclick="openModal();currentModal(10)" src="./images/shows/Oakland City Center/City Center.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(11)" src="./images/shows/Oakland City Center/City Center 2.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(12)" src="./images/shows/Oakland City Center/City Center3.jpg">
+        <img class="archive-img" onclick="openModal();currentModal(13)" src="./images/shows/Oakland City Center/GINA WERFEL .png">
+        <img class="archive-img" onclick="openModal();currentModal(14)" src="./images/shows/Oakland City Center/6B5209B3-4B0E-4BE6-9F98-56C8C270795F_1_105_c.jpeg">
+      </div>
+
+      <!-- Container for the grid images' pop-up modal -->
+      <!-- Click an image in the grid to open an overlay with a bigger image -->
+      <div id="modal" class="archive-modal">
+        <!-- X in the top right corner to close the modal -->
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <!-- Modal navigation by clicking to the right or left of images -->
+        <a class="prev-img" onclick="plusModal(-1)"></a>
+        <a class="next-img" onclick="plusModal(1)"></a>
+        <div class="modal-content">
+          <!-- Prince Street Gallery modal images -->
+          <img class="modal-img wide" src="./images/shows/Prince Street Gallery/2PT866B5.jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/Plunge_darker.jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/Tapestry 40_x30_, oil and spray paint, 2021.jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/IMG_1925.jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/Child's_Horse  60x48  (1).jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/Figure 60_x48_.jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/IMG_1908 (5).jpg">
+          <img class="modal-img" src="./images/shows/Prince Street Gallery/IMG_1920 (2) (1).jpg">
+          <img class="modal-img wide" src="./images/shows/Prince Street Gallery/Intersection _web.jpg">
+
+          <!-- Oakland City Center modal images -->
+          <img class="modal-img wide" src="./images/shows/Oakland City Center/City Center.jpg">
+          <img class="modal-img wide" src="./images/shows/Oakland City Center/City Center 2.jpg">
+          <img class="modal-img" src="./images/shows/Oakland City Center/City Center3.jpg">
+          <img class="modal-img" src="./images/shows/Oakland City Center/GINA WERFEL .png">
+          <img class="modal-img" src="./images/shows/Oakland City Center/6B5209B3-4B0E-4BE6-9F98-56C8C270795F_1_105_c.jpeg">
+
+          <!-- Gallery container for the image information -->
+          <div class="gallery-info">
+            <!-- Prince Street Gallery -->
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <!-- Oakland City Center -->
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+            <div class="info"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Call the archive modal script -->
+    <script src="archive modal script.js"></script>
+
+    <!-- Page footer for copyright and social media info -->
+    <footer class="footer">
+      <div class="footer-left">
+        <p>&copy Gina Werfel</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
