@@ -104,25 +104,39 @@ p {
 .column {
   float: left;
   width: 50%;
+  padding: 0 8px 28px 8px;
 }
 
-.banner h2,
-.banner h3,
-.banner p {
+.banner.front h2,
+.banner.front h3,
+.banner.front p {
   margin-top: 1px;
 }
 
-.banner h2 {
+.banner.front h2 {
   font-weight: bold;
   font-family: Tahoma;
 }
 
-.banner h3 {
+.banner.front h3 {
   color: #737373;
 }
 
-.banner img {
+.banner.front img {
   margin-left: -120px;
+}
+
+.banner.exhibition {
+  max-width: 1080px;
+}
+
+.column.exhibition {
+  width: 65%;
+}
+
+.column.right {
+  text-align: right;
+  width:  35%;
 }
 
 /* === GALLERY === */
@@ -522,9 +536,15 @@ a.collapsible.active {
     letter-spacing: 1px;
   }
 
-  .column {
+  .column,
+  .column.exhibition,
+  .column.right {
     width: 100%;
     padding: 16px 16px 0 16px;
+  }
+
+  .column.right {
+    text-align: left;
   }
 
   .banner img {
