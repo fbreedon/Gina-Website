@@ -104,7 +104,12 @@ p {
 .column {
   float: left;
   width: 50%;
-  padding: 0 8px 28px 8px;
+  padding: 8px 8px 0 8px;
+}
+
+.banner.front {
+  margin-bottom: 64px;
+  border: 2px solid #8c8c8c;
 }
 
 .banner.front h2,
@@ -124,10 +129,24 @@ p {
 
 .banner.front img {
   margin-left: -120px;
+  max-width: 400px;
 }
 
 .banner.exhibition {
   max-width: 1080px;
+}
+
+.banner.exhibition.description {
+  margin-bottom: 28px;
+  padding: 0 8px;
+}
+
+.banner.exhibition.description p:first-child {
+  margin-bottom: 0;
+}
+
+.banner.exhibition img {
+  max-width: 400px;
 }
 
 .column.exhibition {
@@ -547,10 +566,15 @@ a.collapsible.active {
     text-align: left;
   }
 
-  .banner img {
-    max-width: 100%;
+  .banner.front img {
+    max-width: 80%;
     margin-left: 0;
-    padding: 0 16px 0 0;
+    padding: 0 0 16px 0;
+  }
+
+  .banner.exhibition img {
+    max-width: 80%;
+    padding: 0 0 16px 0;
   }
 
   .content-wrapper,
