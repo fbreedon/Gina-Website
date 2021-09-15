@@ -509,6 +509,7 @@ a.collapsible.active {
 
 .about-img {
   max-height: 480px;
+  max-width: 540px;
   margin: 0px 0px 28px 28px;
   float: right;
 }
