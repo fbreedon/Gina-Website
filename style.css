@@ -149,6 +149,24 @@ p {
   max-width: 400px;
 }
 
+.banner.exhibition a {
+  text-decoration: none;
+  line-height: 1.5;
+  color: #4040bf;
+}
+
+.banner.exhibition a:link {
+  color: #4040bf;
+}
+
+.banner.exhibition a:visited {
+  color: #4040bf;
+}
+
+.banner.exhibition a:hover {
+  color: #80e0ff;
+}
+
 .column.exhibition {
   width: 65%;
 }
