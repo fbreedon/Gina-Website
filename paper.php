@@ -42,8 +42,8 @@
       <!-- Gallery container -->
       <div class="gallery">
         <!-- Gallery navigation by clicking to the right or left of images -->
-        <a class="prev-img" onclick="plusImg(-1)"></a>
-        <a class="next-img" onclick="plusImg(1)"></a>
+        <a class="prev-img" onclick="plusImg(-1)">❮</a>
+        <a class="next-img" onclick="plusImg(1)">❯</a>
         <!-- Gallery container for images -->
         <div class="gallery-main">
           <!-- Php to read the image files and display them in the gallery -->

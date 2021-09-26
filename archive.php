@@ -39,12 +39,6 @@
 
     <!-- Archive wrapper pads the margins from the header and footer, differently from content wrapper -->
     <div class="archive-wrapper">
-      <!-- **REMOVED Archive tabs to view either abstractions or landscapes REMOVED** -->
-      <!--div class="archive-tab"-->
-        <!-- **REMOVED The tab link class is gotten by the archive tab script REMOVED** -->
-        <!--a class="tab-link" onclick="openTab(event, 'Abstractions')" id="default-tab">Abstractions</a-->
-        <!--a class="tab-link" onclick="openTab(event, 'Landscapes')">Landscapes</a-->
-      <!--/div-->
       <h2>Abstraction</h2>
       <!-- Abstractions archive image grid -->
       <div id="Abstractions" class="archive-grid tab-content">
@@ -57,6 +51,15 @@
         foreach (glob("images/archive/abstractions/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
           <img class="archive-img" onclick="openModal();currentModal(<?php echo $count ?>)" 
+               src="<?php echo $img_file; ?>" />
+          <?php
+          // Increment the count
+          $count++;
+        }
+        // Do the same as above, but for the wide images, and add a styled wide class
+        foreach (glob("images/archive/abstractions/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+        ?>
+          <img class="archive-img wide" onclick="openModal();currentModal(<?php echo $count ?>)" 
                src="<?php echo $img_file; ?>" />
           <?php
           // Increment the count
@@ -88,9 +91,6 @@
     <div id="modal" class="archive-modal">
       <!-- X in the top right corner to close the modal -->
       <span class="modal-close" onclick="closeModal()">&times;</span>
-      <!-- Modal navigation by clicking to the right or left of images -->
-      <a class="prev-img" onclick="plusModal(-1)"></a>
-      <a class="next-img" onclick="plusModal(1)"></a>
       <div class="modal-content">
         <!-- Abstraction modal images -->
         <!-- Php to read the image files and display them in the modal -->
@@ -100,6 +100,14 @@
         foreach (glob("images/archive/abstractions/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
           <img class="modal-img" src="<?php echo $img_file; ?>" />
+          <?php
+        }
+        // Do the same as above, but for the wide images, and add a styled wide class
+        foreach (glob("images/archive/abstractions/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+        ?>
+          <!--a href="<?php echo $img_file; ?>"-->
+          <img class="modal-img wide" src="<?php echo $img_file; ?>" />
+          <!--/a-->
           <?php
         }
         ?>
@@ -136,6 +144,22 @@
             // Close the opened file
             fclose($file_handle);
           }
+          // Find all the text file paths in the wide directory and store them in an array
+          foreach (glob("images/archive/abstractions/wide/info/*.txt") as $info_file) {
+            // Open and read the current file in the array
+            $file_handle = fopen($info_file, "r");
+          ?>
+            <!-- Gallery image information -->
+            <div class="info">
+              <?php
+              // Read the file line by line and put them all in one div
+              while (!feof($file_handle)) { echo fgets($file_handle); ?> <br> <?php }
+              ?>
+            </div>
+            <?php
+            // Close the opened file
+            fclose($file_handle);
+          }
           ?>
 
           <!-- Landscape image caption information -->
@@ -160,10 +184,10 @@
           ?>
         </div>
       </div>
+      <!-- Modal navigation by clicking to the right or left of images -->
+      <a class="prev-img" onclick="plusModal(-1)">❮</a>
+      <a class="next-img" onclick="plusModal(1)">❯</a>
     </div>
-
-    <!-- **REMOVED Call the archive tab script REMOVED** -->
-    <!--script src="archive tab script.js"></script-->
 
     <!-- Call the archive modal script -->
     <script src="archive modal script.js"></script>
