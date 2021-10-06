@@ -87,6 +87,10 @@ p {
   text-shadow: 1px 1px #80e0ff;
 }
 
+a b {
+  color: #00a3cc;
+}
+
 /* === FRONT PAGE ===*/
 
 .banner {
@@ -220,8 +224,9 @@ p {
   margin: auto;
 }
 
-.wide {
-  height: 75%;
+.slide-img.wide,
+.gallery-img.wide {
+  height: 85%;
 }
 
 .gallery-description {

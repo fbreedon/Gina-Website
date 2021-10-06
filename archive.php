@@ -31,7 +31,7 @@
           <a href="./exhibitions.html">Exhibitions</a>
       	  <a href="./public-art.html">Special Projects</a>
       	  <a href="./archive.php" class="active">Archive</a>
-      	  <a href="./news.html">Press</a>
+      	  <a href="./news.html"><b>new! </b>Press</a>
       	  <a href="./about.html">About</a>
       	</nav>
       </div>
@@ -58,6 +58,33 @@
         }
         // Do the same as above, but for the wide images, and add a styled wide class
         foreach (glob("images/archive/abstractions/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+        ?>
+          <img class="archive-img wide" onclick="openModal();currentModal(<?php echo $count ?>)" 
+               src="<?php echo $img_file; ?>" />
+          <?php
+          // Increment the count
+          $count++;
+        }
+        ?>
+      </div>
+
+      <h2>Works on Paper</h2>
+      <!-- Works on paper archive image grid -->
+      <div id="Paper" class="archive-grid tab-content">
+        <!-- Php to read the image files and display them in the archive grid -->
+        <?php
+        // Find all the image file paths in the directory and store them in an array,
+        // then display each one properly in the grid as a clickable image
+        foreach (glob("images/archive/works on paper/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+        ?>
+          <img class="archive-img" onclick="openModal();currentModal(<?php echo $count ?>)" 
+               src="<?php echo $img_file; ?>" />
+          <?php
+          // Increment the count
+          $count++;
+        }
+        // Do the same as above, but for the wide images, and add a styled wide class
+        foreach (glob("images/archive/works on paper/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
         ?>
           <img class="archive-img wide" onclick="openModal();currentModal(<?php echo $count ?>)" 
                src="<?php echo $img_file; ?>" />
@@ -112,6 +139,25 @@
         }
         ?>
 
+        <!-- Works on paper modal images -->
+        <!-- Php to read the image files and display them in the modal -->
+        <?php
+        // Do the same as above, but for images in works on paper
+        foreach (glob("images/archive/works on paper/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+        ?>
+          <img class="modal-img" src="<?php echo $img_file; ?>" />
+          <?php
+        }
+        // Do the same as above, but for the wide images, and add a styled wide class
+        foreach (glob("images/archive/works on paper/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+        ?>
+          <!--a href="<?php echo $img_file; ?>"-->
+          <img class="modal-img wide" src="<?php echo $img_file; ?>" />
+          <!--/a-->
+          <?php
+        }
+        ?>
+
         <!-- Landscape modal images -->
         <!-- Php to read the image files and display them in the modal -->
         <?php
@@ -146,6 +192,43 @@
           }
           // Find all the text file paths in the wide directory and store them in an array
           foreach (glob("images/archive/abstractions/wide/info/*.txt") as $info_file) {
+            // Open and read the current file in the array
+            $file_handle = fopen($info_file, "r");
+          ?>
+            <!-- Gallery image information -->
+            <div class="info">
+              <?php
+              // Read the file line by line and put them all in one div
+              while (!feof($file_handle)) { echo fgets($file_handle); ?> <br> <?php }
+              ?>
+            </div>
+            <?php
+            // Close the opened file
+            fclose($file_handle);
+          }
+          ?>
+
+          <!-- Works on paper image caption information -->
+          <!-- Php to read the info files and display them under their images -->
+          <?php
+          // Find all the text file paths in the directory and store them in an array
+          foreach (glob("images/archive/works on paper/info/*.txt") as $info_file) {
+            // Open and read the current file in the array
+            $file_handle = fopen($info_file, "r");
+          ?>
+            <!-- Archive modal image information -->
+            <div class="info">
+              <?php
+              // Read the file line by line and put them all in one div
+              while (!feof($file_handle)) { echo fgets($file_handle); ?> <br> <?php }
+              ?>
+            </div>
+            <?php
+            // Close the opened file
+            fclose($file_handle);
+          }
+          // Find all the text file paths in the wide directory and store them in an array
+          foreach (glob("images/archive/works on paper/wide/info/*.txt") as $info_file) {
             // Open and read the current file in the array
             $file_handle = fopen($info_file, "r");
           ?>
