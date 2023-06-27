@@ -31,7 +31,7 @@
           <a href="./exhibitions.html">Exhibitions</a>
       	  <a href="./public-art.html">Special Projects</a>
       	  <a href="./archive.php">Archive</a>
-      	  <a href="./news.html"><b>new! </b>Press</a>
+      	  <a href="./news.html">Press</a>
       	  <a href="./about.html">About</a>
       	</nav>
       </div>
@@ -48,20 +48,20 @@
         <div class="gallery-main">
           <!-- Php to read the image files and display them in the gallery -->
           <?php
+          // Do the same as above, but for the wide images, and add a styled wide class
+          foreach (glob("images/paintings/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+          ?>
+            <!--a href="<?php echo $img_file; ?>"-->
+            <img class="gallery-img wide" src="<?php echo $img_file; ?>" />
+            <!--/a-->
+            <?php
+          }
           // Find all the image file paths in the directory and store them in an array,
           // then display each one properly in the gallery as a clickable image
           foreach (glob("images/paintings/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
           ?>
             <!--a href="<?php echo $img_file; ?>"-->
             <img class="gallery-img" src="<?php echo $img_file; ?>" />
-            <!--/a-->
-            <?php
-          }
-          // Do the same as above, but for the wide images, and add a styled wide class
-          foreach (glob("images/paintings/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
-          ?>
-            <!--a href="<?php echo $img_file; ?>"-->
-            <img class="gallery-img wide" src="<?php echo $img_file; ?>" />
             <!--/a-->
             <?php
           }
