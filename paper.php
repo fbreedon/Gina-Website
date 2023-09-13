@@ -50,7 +50,7 @@
           <?php
           // Find all the image file paths in the directory and store them in an array,
           // then display each one properly in the gallery as a clickable image
-          foreach (glob("images/works on paper/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+          foreach (glob("images/works on paper/*.{JPG,jpg,jpeg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
           ?>
             <!--a href="<?php echo $img_file; ?>"-->
               <img class="gallery-img" src="<?php echo $img_file; ?>" />
@@ -58,7 +58,7 @@
             <?php
           }
           // Do the same as above, but for the wide images, and add a styled wide class
-          foreach (glob("images/works on paper/wide/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
+          foreach (glob("images/works on paper/wide/*.{JPG,jpg,jpeg,gif,png,bmp}", GLOB_BRACE) as $img_file) {
           ?>
             <!--a href="<?php echo $img_file; ?>"-->
               <img class="gallery-img wide" src="<?php echo $img_file; ?>" />
@@ -122,7 +122,7 @@
           $count = 1;
           // Find all the icon file paths in the directory and store them in an array,
           // then display each one properly in the nav bar with an onclick function
-          foreach (glob("images/works on paper/icons/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $icon_file) {
+          foreach (glob("images/works on paper/icons/*.{JPG,jpg,jpeg,gif,png,bmp}", GLOB_BRACE) as $icon_file) {
           ?>
             <img class="gallery-icon" 
                  onclick="currentImg(<?php echo $count ?>)" 
@@ -132,7 +132,7 @@
             $count++;
           }
           // Do the same as above, but for the wide icons
-          foreach (glob("images/works on paper/wide/icons/*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE) as $icon_file) {
+          foreach (glob("images/works on paper/wide/icons/*.{JPG,jpg,jpeg,gif,png,bmp}", GLOB_BRACE) as $icon_file) {
           ?>
             <img class="gallery-icon" 
                  onclick="currentImg(<?php echo $count ?>)" 
