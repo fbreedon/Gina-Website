@@ -198,7 +198,7 @@ a b {
   display: block;
   height: 100%;
   margin: auto;
-  max-height: 400px;
+  /*max-height: 400px;*/
 }
 
 .gallery {
@@ -221,14 +221,14 @@ a b {
   display: block;
   max-width: 1080px;
   height: 100%;
-  max-height: 400px;
+  /*max-height: 400px;*/
   margin: auto;
 }
 
 .slide-img.wide,
 .gallery-img.wide {
   height: 85%;
-  max-height: 264px;
+  /*max-height: 264px;*/
 }
 
 .gallery-description {
@@ -631,7 +631,7 @@ a.collapsible.active {
   .gallery-main {
     margin: auto;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 400px;
     min-width: 0;
     min-height: 0;
     height: auto;
@@ -639,7 +639,7 @@ a.collapsible.active {
 
   .slide-img,
   .gallery-img {
-    max-height: 100%;
+    max-height: 400px;
     max-width: 100%;
     height: auto;
   }
@@ -684,6 +684,10 @@ a.collapsible.active {
     height: 100%;
     max-height: 600px;
     max-width: 420px;
+  }
+
+  .footer-left {
+    display: none;
   }
 
 }
